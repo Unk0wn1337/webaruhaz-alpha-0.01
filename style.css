@@ -95,7 +95,7 @@ article div img {
 @media only screen and (max-width: 700px) {
    article{
       grid-template-columns: 2fr 2fr;
-      color: rgb(A13646);    
+      color:#A13646;    
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: calc( 8px + 2vw );
    }
