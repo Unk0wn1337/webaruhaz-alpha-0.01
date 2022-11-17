@@ -1,4 +1,5 @@
 main {
+   background-color: #2D4671;
     display:grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas:    "h h h"
@@ -10,8 +11,10 @@ main {
 
  header { 
 grid-area: h;
-
+color: red;
  }   
+
+
  nav {
 grid-area: n;
 
@@ -19,34 +22,93 @@ grid-area: n;
  }
  article {
 grid-area: a;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr; 
+color: white;
 
- }
+}
  aside {
     grid-area: as;
-
+    color: red;     
  }
  footer {
     grid-area: f;
-
- }
+   color: red;   
+   text-align: center;
+}
 
  header, article, aside, footer {
     border: solid 1px black;
     padding: 10px;
+   
+ }
+ 
+ article div img {
+width: 90%;
+max-width:  400px;
 
  }
  
- 
- 
+
+.Termek {
+   font-family: fantasy;
+   border: solid 0.1cm; color: #D3D600;
+}
+nav ol {
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   color: #D3D600;
+}
+a:hover{
+   text-decoration: none;
+   color: red;
+   text-transform: none;
+
+}
+
+header  {
+   text-align: center;
+   font-family: monospace;
+   text-transform: inherit;
+
+}
+
+
+
+
+
+
+
+
+article div img {
+   border:2px solid black;
+   margin: 4px
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+   article{
+      grid-template-columns: 2fr 2fr;
+      color: rgb(A13646);    
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: calc( 8px + 2vw );
+   }
+ }   
+
+
  @media only screen and (max-width: 400px) {
     main{
-        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-columns: 1fr;
         grid-template-areas: "h "
+                            "as"
                              "n "  
-                             "as"
                              "a "  
                              "f ";
     }
  }
-
- 
